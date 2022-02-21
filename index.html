@@ -14,6 +14,10 @@
                 <h1>Metronome</h1>
             </div>
 
+            <div>
+                <input type="Button" onclick="change()" value="Start" id="startStopButton"></input>
+            </div>
+
             <div class="bpmSlider">
                 <input type="range" min="1" max="200" value="100" class="slider" id="myRange">
             </div>
@@ -31,6 +35,15 @@
         </div>
 
         <script>
+
+            // https://stackoverflow.com/questions/10671174/changing-button-text-onclick
+            function change()
+            {
+                var elem = document.getElementById("startStopButton");
+                if (elem.value=="Start") elem.value = "Stop";
+                else elem.value = "Start";
+            }
+
             var slider = document.getElementById("myRange");
             var output = document.getElementById("bpmNum");
             output.innerHTML = slider.value; // Display the default slider value
@@ -38,6 +51,8 @@
             // Update the current slider value (each time you drag the slider handle)
             slider.oninput = function() {
             output.innerHTML = this.value;
+
+            
 }
         </script>
     </body>
