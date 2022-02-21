@@ -14,7 +14,12 @@ div{
 
 h1{
     text-align: center;
-    padding-bottom: 10px;
+    height: 0;
+}
+
+h2{
+    text-align: center;
+    height: 10px;
 }
 
 form{

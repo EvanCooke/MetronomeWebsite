@@ -3,22 +3,42 @@
     <head>
         <title>Metronome</title>
         <link rel="stylesheet" href="./style.css">
+        <script src="./logic.js"></script> <!-- dosent work atm -->
+        
     </head>
     <body>
 
         <div>
+            
             <div>
                 <h1>Metronome</h1>
             </div>
 
             <div class="bpmSlider">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input type="range" min="1" max="200" value="100" class="slider" id="myRange">
             </div>
 
-            <form action="index.html" method = GET>
-                <input type="text" name="userSearch" placeholder = "Search Song BPM">
-                <button type="submit">Search</button>
-            </form>
+            <div>
+                <h2><span id="bpmNum"></span> bpm</h2>
+            </div>
+
+            <div>
+                <form action="index.html" method = GET>
+                    <input type="text" name="userSearch" placeholder = "Search Song BPM">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </div>
+
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("bpmNum");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+}
+        </script>
     </body>
 </html>
