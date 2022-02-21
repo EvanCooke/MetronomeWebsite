@@ -1,8 +1,22 @@
+
 div{
-    /* Center Element */
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    /*transform: translate(-50%, -50%);
-    */
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+
+.slider{
+    width: 100%;
+}
+
+
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+form{
+    text-align: center;
 }
