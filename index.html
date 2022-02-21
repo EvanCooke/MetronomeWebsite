@@ -2,17 +2,21 @@
 <html>
     <head>
         <title>Metronome</title>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>Metronome</h1>
 
-        <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            </div>
+        <div class="mainElements">
+            <h1>Metronome</h1>
 
-        <form action="index.html" method = GET>
-            <input type="text" name="search" placeholder = "Search Song BPM">
-            <button type="submit">Search</button>
-        </form>
+            <div class="bpmSlider">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+
+            <form action="index.html" method = GET>
+                <input type="text" name="userSearch" placeholder = "Search Song BPM">
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </body>
 </html>
